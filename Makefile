@@ -71,6 +71,7 @@ all : $(BUILD)/$(TARGET)$(SUFFIX)
 $(BUILD)/$(TARGET)$(SUFFIX) : $(OBJECTS)
 	$(Q)$(CC) -o $@ $^
 	$(Q)echo complete the all.
+	$(Q)mv $@ ./
 
 $(BUILD)/Obj/%.o : %.c Makefile | $(BUILD)/Obj
 	$(Q)echo "buid $(subst ./,,$<)"
